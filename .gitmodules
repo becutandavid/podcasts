@@ -1,0 +1,12 @@
+[submodule "podcasts-backend-fastapi"]
+	path = podcasts-backend-fastapi
+	url = https://github.com/becutandavid/podcasts-backend-fastapi.git
+[submodule "podcasts-model-serving"]
+	path = podcasts-model-serving
+	url = https://github.com/becutandavid/podcasts-model-serving.git
+[submodule "podcasts-crawler"]
+	path = podcasts-crawler
+	url = https://github.com/becutandavid/podcasts-crawler.git
+[submodule "podcasts-analysis"]
+	path = podcasts-analysis
+	url = https://github.com/becutandavid/podcasts-analysis.git
