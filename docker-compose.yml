@@ -82,7 +82,7 @@ services:
       - "standalone"
       - "postgres"
 
-    command: "poetry run uvicorn podcasts_backend.main:app --host 0.0.0.0 --port 8000 --reload" 
+    command: "uvicorn podcasts_backend.main:app --host 0.0.0.0 --port 8000 --reload" 
 
   podcasts_crawler:
     build:
@@ -92,7 +92,8 @@ services:
     environment:
       PODCASTINDEX_API_KEY: ${PODCASTINDEX_API_KEY}
       PODCASTINDEX_API_SECRET: ${PODCASTINDEX_API_SECRET}
-    
+    depends_on:
+      - "podcasts_backend"
     volumes:
       - ${DOCKER_VOLUME_DIRECTORY:-.}/podcasts-crawler/podcasts_crawler:/app/podcasts_crawler
       
