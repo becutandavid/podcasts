@@ -82,7 +82,7 @@ services:
       - "standalone"
       - "postgres"
 
-      command: "uvicorn podcasts_backend.main:app --host 0.0.0.0 --port 8000 --reload" 
+    command: "uvicorn podcasts_backend.main:app --host 0.0.0.0 --port 8000 --reload" 
 
   podcasts_crawler:
     build:
@@ -100,5 +100,5 @@ services:
 
 networks:
   default:
-    name: milvus
+    name: podcasts_backend_network
     driver: bridge
